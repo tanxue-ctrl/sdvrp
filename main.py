@@ -1,13 +1,13 @@
-from sdvrp.agent import A2CAgent
-from sdvrp.attention_model import AttentionModel
-from sdvrp.env import DataGenerator, Env
-from sdvrp.baseline import RolloutBaseline as Baseline
+from agent import A2CAgent
+from attention_model import AttentionModel
+from env import DataGenerator, Env
+from baseline import RolloutBaseline as Baseline
 
 args = {
-    'n_epochs': 1,
+    'n_epochs': 10,
     'n_batch': 2,
     'batch_size': 4,
-    'n_nodes': 10,
+    'n_nodes': 4,
     'initial_demand_size': 2,
     'max_load': 9,
     'speed': 0.1,

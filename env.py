@@ -12,12 +12,13 @@ def create_test_dataset(args):
     # build task name and datafiles
     task_name = 'VRP-size-{}-len-{}.txt'.format(batch_size, n_nodes)
     fname = os.path.join(data_dir, task_name)
-
+    print(fname)
     # create/load data
     if os.path.exists(fname):
         print('Loading dataset for {}...'.format(task_name))
 
         data = torch.load(fname)
+        print(data)
     else:
         print('Creating dataset for {}...'.format(task_name))
         # Generate a training set of size batch_size

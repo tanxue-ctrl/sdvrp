@@ -120,6 +120,7 @@ class A2CAgent(object):
             print("average test reward: ", avg_reward)
             if (epoch % args['save_interval'] == 0) or epoch == args['n_epochs'] - 1:
                 print('Saving model and state...')
+                print(args['save_path'])
                 torch.save(
                     {
                         'model': self.model.state_dict(),
